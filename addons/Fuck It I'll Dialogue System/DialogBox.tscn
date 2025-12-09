@@ -1,0 +1,247 @@
+[gd_scene load_steps=20 format=3 uid="uid://cejpql8nmn7tg"]
+
+[ext_resource type="Script" uid="uid://cwslm8ka0lb8j" path="res://addons/Fuck It I'll Dialogue System/dialog_box.gd" id="1_vyoxu"]
+[ext_resource type="Script" uid="uid://rdu8s75f4gjs" path="res://addons/Fuck It I'll Dialogue System/PortraitResource.gd" id="2_2310u"]
+[ext_resource type="FontFile" uid="uid://dawenhkhvwgsl" path="res://assets/gravitation_falls.ttf" id="2_fkrwo"]
+[ext_resource type="Texture2D" uid="uid://0hfi0wlvtont" path="res://characters/Stan/portrait.png" id="3_6myjj"]
+[ext_resource type="Script" uid="uid://bigcfyacvshrd" path="res://addons/type_writer_label/classes/type_writer_label.gd" id="4_2yah0"]
+[ext_resource type="Texture2D" uid="uid://cge6684v70g8p" path="res://characters/Dipper/portrait.png" id="4_quyi8"]
+[ext_resource type="Texture2D" uid="uid://biknbtpkbyeup" path="res://characters/Mabel/portrait.png" id="5_quyi8"]
+
+[sub_resource type="Resource" id="Resource_quyi8"]
+script = ExtResource("2_2310u")
+name = "stan"
+texture = ExtResource("3_6myjj")
+metadata/_custom_type_script = "uid://rdu8s75f4gjs"
+
+[sub_resource type="Resource" id="Resource_o0tvq"]
+script = ExtResource("2_2310u")
+name = "dipper"
+texture = ExtResource("4_quyi8")
+metadata/_custom_type_script = "uid://rdu8s75f4gjs"
+
+[sub_resource type="Resource" id="Resource_pvmrt"]
+script = ExtResource("2_2310u")
+name = "mabel"
+texture = ExtResource("5_quyi8")
+metadata/_custom_type_script = "uid://rdu8s75f4gjs"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ppbhu"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+anti_aliasing_size = 2.26
+
+[sub_resource type="Gradient" id="Gradient_4ig15"]
+offsets = PackedFloat32Array(0, 0.083333336, 0.25, 1)
+colors = PackedColorArray(0, 0, 0, 0.5228758, 0, 0, 0, 0.78431374, 0, 0, 0, 0.78431374, 0, 0, 0, 0)
+metadata/_snap_enabled = true
+metadata/_snap_count = 100
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lkxj0"]
+gradient = SubResource("Gradient_4ig15")
+
+[sub_resource type="LabelSettings" id="LabelSettings_0qfmr"]
+font = ExtResource("2_fkrwo")
+font_size = 32
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1c767"]
+bg_color = Color(0, 0, 0, 0.5294118)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.039215688, 0.039215688, 0.039215688, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ka5fy"]
+bg_color = Color(0, 0, 0, 0.7058824)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fdelc"]
+bg_color = Color(0, 0, 0, 0.5294118)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hwnc7"]
+bg_color = Color(0, 0, 0, 0.7058824)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2310u"]
+bg_color = Color(0, 0, 0, 0.7058824)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[node name="DialogBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_vyoxu")
+portrait_resources = Array[ExtResource("2_2310u")]([SubResource("Resource_quyi8"), SubResource("Resource_o0tvq"), SubResource("Resource_pvmrt")])
+
+[node name="MessagePanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -319.0
+offset_top = -172.0
+offset_right = 319.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ppbhu")
+
+[node name="Line" type="Sprite2D" parent="MessagePanel"]
+position = Vector2(318.99997, 86.49999)
+scale = Vector2(9.937499, 2.6718752)
+texture = SubResource("GradientTexture2D_lkxj0")
+region_filter_clip_enabled = true
+
+[node name="SpeakerLabel" type="Label" parent="MessagePanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -308.5
+offset_top = -209.0
+offset_right = 307.0
+offset_bottom = -176.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Speaker"
+label_settings = SubResource("LabelSettings_0qfmr")
+
+[node name="SpeakerPic" type="Sprite2D" parent="MessagePanel"]
+position = Vector2(88, 86)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_6myjj")
+region_rect = Rect2(14.345, 27.305, 50.43, 52.42)
+
+[node name="DialogueText" type="RichTextLabel" parent="MessagePanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -129.0
+offset_top = -160.0
+offset_right = 308.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+text = "This is text for testing the dialogue thing"
+fit_content = true
+scroll_following = true
+script = ExtResource("4_2yah0")
+metadata/_custom_type_script = "uid://bigcfyacvshrd"
+
+[node name="Options" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -129.0
+offset_top = -45.0
+offset_right = 308.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/separation = 51
+alignment = 1
+
+[node name="A" type="Button" parent="Options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fkrwo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1c767")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ka5fy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fdelc")
+text = "Option A"
+
+[node name="B" type="Button" parent="Options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fkrwo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1c767")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hwnc7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fdelc")
+text = "Option B"
+
+[node name="C" type="Button" parent="Options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_fkrwo")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1c767")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2310u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fdelc")
+text = "Option C"
