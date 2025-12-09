@@ -1,0 +1,15 @@
+[
+  { "id": "start", "speaker": "mabel", "text": "This is my first line." },
+  { "speaker": "dipper", "text": "No way, me too!" },
+  {
+	"speaker": "mabel",
+	"text": "Choose wisely.",
+	"optionA": { "text": "Option A", "jump": "after_choice_a" },
+	"optionB": { "text": "Option B", "jump": "after_choice_b" },
+	"optionC": { "text": "Option C", "jump": "after_choice_c" }
+  },
+  { "id": "after_choice_a", "speaker": "dipper", "text": "I choose, {picked_option}.", "set_var": { "met_mabel": true }, "jump": "end" },
+  { "id": "after_choice_b", "speaker": "dipper", "text": "I choose, {picked_option}.", "set_var": { "met_mabel": true }, "jump": "end" },
+  { "id": "after_choice_c", "speaker": "dipper", "text": "I choose, {picked_option}.", "set_var": { "met_mabel": true }, "jump": "end" },
+  { "id": "mabel_has_been_met", "speaker": "dipper", "text": "don't I know you from somewhere?", "jump": "end" }
+]

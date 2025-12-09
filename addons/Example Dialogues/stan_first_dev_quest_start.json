@@ -1,0 +1,10 @@
+[
+    { "id": "has_not_taken_signs", "speaker": "stan", "text": "Dipper! Go hang these signs up in the forest. I'd do it but I don't want to." },
+    { "speaker": "dipper", "text": "What? Why can't mabel do it?" },
+    { "speaker": "stan", "text": "Dipper... I don't know." },
+    { "speaker": "stan", "text": "She said something about a unicorn, and round two." },
+    { "speaker": "stan", "text": "I don't ask questions anymore." },
+    { "speaker": "dipper", "text": "Great. Thanks Mabel... Fine give them to me." },
+    { "speaker": "stan", "text": "Do a good job and I will maybe, possibly, probably not give you $10" },
+    { "quest": { "give": ["stan_hang_signs"], "set_quest_var": { "signs_taken": true } }, "jump": "end" },
+]
