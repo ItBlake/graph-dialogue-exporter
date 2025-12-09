@@ -1,0 +1,188 @@
+[gd_scene load_steps=5 format=3 uid="uid://cerrcbw4kg7yp"]
+
+[ext_resource type="Script" uid="uid://bmef1hofq2d1f" path="res://nodes/Dialogue Node.gd" id="1_5hpn3"]
+[ext_resource type="Texture2D" uid="uid://dps8mwnnuc5nm" path="res://addons/dialogue_nodes/icons/DistractionFree.svg" id="2_dxc44"]
+
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_j5axm"]
+number_color = Color(1, 1, 1, 1)
+symbol_color = Color(1, 1, 1, 1)
+function_color = Color(1, 1, 1, 1)
+member_variable_color = Color(1, 1, 1, 1)
+color_regions = {
+"[ ]": Color(0.647059, 0.937255, 0.67451, 1)
+}
+
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_sch8y"]
+number_color = Color(1, 1, 1, 1)
+symbol_color = Color(1, 1, 1, 1)
+function_color = Color(1, 1, 1, 1)
+member_variable_color = Color(1, 1, 1, 1)
+color_regions = {
+"[ ]": Color(0.647059, 0.937255, 0.67451, 1)
+}
+
+[node name="dialogueNode" type="GraphNode"]
+offset_right = 271.0
+offset_bottom = 263.0
+title = "Dialogue Node"
+ignore_invalid_connection_type = true
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color(1, 1, 1, 1)
+slot/1/left_icon = null
+slot/1/right_enabled = false
+slot/1/right_type = 0
+slot/1/right_color = Color(1, 1, 1, 1)
+slot/1/right_icon = null
+slot/1/draw_stylebox = true
+slot/2/left_enabled = false
+slot/2/left_type = 0
+slot/2/left_color = Color(1, 1, 1, 1)
+slot/2/left_icon = null
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color(1, 1, 1, 1)
+slot/2/right_icon = null
+slot/2/draw_stylebox = true
+slot/3/left_enabled = false
+slot/3/left_type = 0
+slot/3/left_color = Color(1, 1, 1, 1)
+slot/3/left_icon = null
+slot/3/right_enabled = true
+slot/3/right_type = 0
+slot/3/right_color = Color(1, 1, 1, 1)
+slot/3/right_icon = null
+slot/3/draw_stylebox = true
+slot/4/left_enabled = false
+slot/4/left_type = 0
+slot/4/left_color = Color(1, 1, 1, 1)
+slot/4/left_icon = null
+slot/4/right_enabled = false
+slot/4/right_type = 0
+slot/4/right_color = Color(1, 1, 1, 1)
+slot/4/right_icon = null
+slot/4/draw_stylebox = true
+slot/5/left_enabled = false
+slot/5/left_type = 0
+slot/5/left_color = Color(1, 1, 1, 1)
+slot/5/left_icon = null
+slot/5/right_enabled = true
+slot/5/right_type = 0
+slot/5/right_color = Color(1, 1, 1, 1)
+slot/5/right_icon = null
+slot/5/draw_stylebox = true
+slot/6/left_enabled = false
+slot/6/left_type = 0
+slot/6/left_color = Color(1, 1, 1, 1)
+slot/6/left_icon = null
+slot/6/right_enabled = true
+slot/6/right_type = 0
+slot/6/right_color = Color(1, 1, 1, 1)
+slot/6/right_icon = null
+slot/6/draw_stylebox = true
+slot/7/left_enabled = false
+slot/7/left_type = 0
+slot/7/left_color = Color(1, 1, 1, 1)
+slot/7/left_icon = null
+slot/7/right_enabled = true
+slot/7/right_type = 0
+slot/7/right_color = Color(1, 1, 1, 1)
+slot/7/right_icon = null
+slot/7/draw_stylebox = true
+script = ExtResource("1_5hpn3")
+
+[node name="speakerLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Speaker"
+
+[node name="speaker" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Required field.
+The ID is used to identify each tree in a dialogue tree."
+
+[node name="dialogueLabel" type="Label" parent="."]
+layout_mode = 2
+text = "Dialogue"
+
+[node name="DialogueContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Dialogue" type="TextEdit" parent="DialogueContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+wrap_mode = 1
+syntax_highlighter = SubResource("CodeHighlighter_j5axm")
+highlight_all_occurrences = true
+
+[node name="ExpandButton" type="Button" parent="DialogueContainer"]
+layout_mode = 2
+icon = ExtResource("2_dxc44")
+
+[node name="DialoguePanel" type="PopupPanel" parent="DialogueContainer"]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(800, 600)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DialogueContainer/DialoguePanel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 796.0
+offset_bottom = 596.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueExpanded" type="TextEdit" parent="DialogueContainer/DialoguePanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 91)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+wrap_mode = 1
+syntax_highlighter = SubResource("CodeHighlighter_sch8y")
+highlight_all_occurrences = true
+
+[node name="CenterContainer" type="CenterContainer" parent="DialogueContainer/DialoguePanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="DialogueContainer/DialoguePanel/VBoxContainer/CenterContainer"]
+layout_mode = 2
+text = "Close"
+
+[node name="OptionsToggle" type="CheckBox" parent="."]
+layout_mode = 2
+text = "Options?"
+
+[node name="OptionA" type="LineEdit" parent="."]
+visible = false
+layout_mode = 2
+placeholder_text = "Option A"
+
+[node name="OptionB" type="LineEdit" parent="."]
+visible = false
+layout_mode = 2
+placeholder_text = "Option B"
+
+[node name="OptionC" type="LineEdit" parent="."]
+visible = false
+layout_mode = 2
+placeholder_text = "Option C"
+
+[connection signal="pressed" from="DialogueContainer/ExpandButton" to="." method="_on_expand_button_pressed"]
+[connection signal="text_changed" from="DialogueContainer/DialoguePanel/VBoxContainer/DialogueExpanded" to="." method="_on_dialogue_expanded_text_changed"]
+[connection signal="pressed" from="DialogueContainer/DialoguePanel/VBoxContainer/CenterContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="toggled" from="OptionsToggle" to="." method="_on_options_toggle_toggled"]

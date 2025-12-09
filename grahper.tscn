@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=3 uid="uid://d17dt67vqtrnn"]
+
+[ext_resource type="Script" uid="uid://dru3vj0iqp4eh" path="res://graph_edit.gd" id="1_rbspp"]
+[ext_resource type="PackedScene" uid="uid://cuon26ev86qr1" path="res://startNode.tscn" id="2_qe1cs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4t0rr"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_detail = 5
+
+[sub_resource type="Gradient" id="Gradient_4t0rr"]
+offsets = PackedFloat32Array(0, 0.1, 0.9, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+metadata/_snap_enabled = true
+metadata/_snap_count = 20
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rbspp"]
+gradient = SubResource("Gradient_4t0rr")
+
+[node name="Grahper" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+top_level = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="FileButton" type="MenuButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "File"
+flat = false
+item_count = 3
+popup/item_0/text = "New"
+popup/item_0/id = 0
+popup/item_1/text = "Open"
+popup/item_1/id = 1
+popup/item_2/text = "Save"
+popup/item_2/id = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 648)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4t0rr")
+
+[node name="GraphEdit" type="GraphEdit" parent="VBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rbspp")
+
+[node name="startNode" parent="VBoxContainer/Panel/GraphEdit" instance=ExtResource("2_qe1cs")]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 260.0
+offset_right = 592.0
+offset_bottom = 338.0
+mouse_filter = 1
+position_offset = Vector2(500, 260)
+
+[node name="line" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(576, 31.5)
+scale = Vector2(18, 0.015624997)
+texture = SubResource("GradientTexture2D_rbspp")
+
+[node name="SaveDialog" type="FileDialog" parent="."]
+oversampling_override = 1.0
+title = "Save Dialogue As..."
+initial_position = 1
+content_scale_factor = 0.65
+display_mode = 1
+use_native_dialog = true
